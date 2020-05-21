@@ -5,6 +5,8 @@ kai_C1<-read.table('clipboard',header=T) #0327_分组回归数据，sheetC1
 pgr=pdata.frame(kai_C1,index=c("prov","year"))#将数据转换为面板格式，注意指定个体名和时间名
 gr_pool<-plm(lnCO2~lnUP+lnGDP+lnCLA+lnGSA+RD+lnBD,data=pgr,model="pooling")
 summary(gr_pool)#看下结果
+```
+
 kai_C2<-read.table('clipboard',header=T) #0327_分组回归数据，sheetC2
 pgr=pdata.frame(kai_C2,index=c("prov","year"))#将数据转换为面板格式，注意指定个体名和时间名
 gr_pool<-plm(lnCO2~lnUP+lnGDP+lnCLA+lnGSA+RD+lnBD,data=pgr,model="pooling")
@@ -31,4 +33,10 @@ Some basic Git commands are:
 git status
 git add
 git commit
+```
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
 ```
